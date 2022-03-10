@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * main- should print: with proper grammar, 
+ * main - prints the phrase with proper grammar,
  * but the outcome is a piece of art,
- * return: 0 if true, otherwise return non-zero
+ * Return: 0 if exited properly, non-zero otherwise
  */
 int main(void)
 {
