@@ -1,38 +1,45 @@
-#include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * print_tab - Prints an array of string
- * @tab: The array to print
+ * *argstostr - concatenates all the arguments of the program
+ * @ac: number of arguments
+ * @av: array of arguments
  *
- * Return: nothing
+ * Return: Pointer to the new string (Success), NULL (Error)
  */
-void print_tab(char **tab)
+char *argstostr(int ac, char **av)
 {
-  int i;
+	int i, j, k, len;
+	char *str;
 
-  for (i = 0; tab[i] != NULL; ++i)
-    {
-      printf("%s\n", tab[i]);
-    }
-}
+	if (ac == 0 || av == NULL)
+		return (NULL);
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: 1 if an error occurred, 0 otherwise
- */
-int main(void)
-{
-  char **tab;
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+			len++;
+		len++;
+	}
 
-  tab = strtow("      Holberton School         #cisfun      ");
-  if (tab == NULL)
-    {
-      printf("Failed\n");
-      return (1);
-    }
-  print_tab(tab);
-  return (0);
+	str = malloc(sizeof(char) * (len + 1));
+
+	if (str == NULL)
+		return (NULL);
+
+	k = 0;
+
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++)
+		{
+			str[k] = av[i][j];
+			k++;
+		}
+		str[k] = '\n';
+		k++;
+	}
+
+	return (str);
 }
