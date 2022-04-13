@@ -67,5 +67,7 @@ Automatic and dynamic allocation, malloc and free
 	>Returns NULL if str == NULL or str == ""
 
 	>If your function fails, it should return NULL
+
 		end;
+
 		@phantom-0308
