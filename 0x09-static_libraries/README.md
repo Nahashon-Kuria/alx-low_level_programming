@@ -24,6 +24,7 @@ Task { For this project, students are expected to look at this concept: C static
 		unsigned int _strspn(char *s, char *accept);
 		char *_strpbrk(char *s, char *accept);
 		char *_strstr(char *haystack, char *needle);
+
 	>If you haven’t coded all of the above functions create empty ones with the right prototype.Don’t forget to push your main.h file to your repository. It should at least contain all the prototypes of the above functions.
 1. Create a script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
 
