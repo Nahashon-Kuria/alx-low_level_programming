@@ -68,6 +68,6 @@ Automatic and dynamic allocation, malloc and free
 
 	>If your function fails, it should return NULL
 
-		end;
+end;
 
 		@phantom-0308
