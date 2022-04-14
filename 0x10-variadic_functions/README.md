@@ -1,6 +1,6 @@
 		0x10. C - Variadic functions
 
-     Task {The student is expected to know how to to use va_start, va_arg and va_end macros}
+Task {The student is expected to know how to to use va_start, va_arg and va_end macros}
 
 0. Write a function that returns the sum of all its parameters.
 	>Prototype: int sum_them_all(const unsigned int n, ...);
